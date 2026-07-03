@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="Assests/cricket_brain_favicon.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Cricket Brain</title>
+</head>
+<body>
+
+    <!-- Landing Screen -->
+    <div id="landing-screen" class="screen-card">
+        <h1>🏏CRICKET BRAIN🏏</h1>
+        <p>"Don't Duck Out — Test Your Cricket IQ"</p>
+    <label for="player-name">Your Name</label>
+    <input type="text" id="player-name" placeholder="Enter Your Name">
+
+    <div class="category-selector">
+  <h2>Select Category</h2>
+  <div class="pills-row">
+    <label><input type="radio" name="category" value="IPL"><span>IPL</span></label>
+    <label><input type="radio" name="category" value="Players"><span>Players</span></label>
+    <label><input type="radio" name="category" value="Test Cricket"><span>Test Cricket</span></label>
+    <label><input type="radio" name="category" value="Rules"><span>Rules</span></label>
+  </div>
+</div>
+
+
+    <div class="game-rules">
+    <h2>How to Play</h2>
+<ul>
+  <li>Enter your name and choose a category</li>
+  <li>Answer 10 questions before the timer runs out</li>
+  <li>Each correct answer earns 1 point</li>
+  <li>Your score gets saved to the leaderboard</li>
+</ul>
+    </div>
+    <div class="two-buttons">
+        <button id="start-btn" class="start-quiz-btn std-btn">Start Quiz 🏏</button>
+        <button id="leaderboard-btn" class="view-leaderboard-btn std-btn">View Leaderboard 🏆</button>
+    </div>
+    </div>
+</div>
+<!-- /////////////////////////////////////////////// -->
+
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen-card hidden">
+     <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+     </div>
+    <p id="question-counter">Q1 of 10</p>
+
+    <div id="quiz-header">
+        <span id="timer-display">⏱ 15s</span>
+        <span id="live-score">Score: 0</span>
+    </div>
+
+    <p id="current-category">IPL</p>
+    <h2 id="question-text">Current Question</h2>
+
+    <div id="options-container">
+  <button class="option-btn" id="option-a">Option A</button>
+  <button class="option-btn" id="option-b">Option B</button>
+  <button class="option-btn" id="option-c">Option C</button>
+  <button class="option-btn" id="option-d">Option D</button>
+</div>
+
+   <p id="explanation-text" class="hidden"></p>
+   <button id="next-btn" class="hidden">Next Question →</button>
+</div>
+<!-- /////////////////////////////////////////////// -->
+
+
+<!-- Result Screen -->
+
+<div id="result-screen" class="hidden screen-card">
+    <h2 id="result-title">Quiz Complete!</h2>
+<div id="score-display">
+    <span id="final-score">8</span>
+    <span id="total-score">/10</span>
+</div>
+<p id="performance-message">You played well!</p>
+
+<div id="score-breakdown">
+  <span id="correct-count">✅ Correct: 8</span>
+  <span id="wrong-count">❌ Wrong: 2</span>
+</div>
+
+<div id="result-buttons">
+  <button id="play-again-btn" class="std-btn">Play Again 🔄</button>
+  <button id="home-btn" class="std-btn">Home 🏠</button>
+</div>
+</div>
+<!-- ///////////////////////////////////////////// -->
+
+<!-- Leaderboard HTML -->
+ <div id="leaderboard-screen" class="screen-card hidden">
+    <h2>🏆 Winners Leaderboard 🏆</h2>
+    <table id="leaderboard-table">
+   <thead>
+    <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Category</th>
+        <th>Date</th>
+    </tr>
+   </thead>     
+   <tbody id="leaderboard-body"></tbody>
+    </table>
+    <button id="clear-leaderboard-btn">Clear LeaderBoard 🗑️</button>
+    <button id="back-home-btn" class="std-btn">Go to Home 🛖</button>
+ </div>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+</body>
+</html>
+

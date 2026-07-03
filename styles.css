@@ -1,0 +1,444 @@
+:root {
+  --primary: #1a472a;        /* deep cricket ground green */
+  --primary-light: #2d6a4f;  /* lighter green for hovers */
+  --accent: #f4c430;         /* gold — like a cricket trophy */
+  --accent-dark: #d4a017;    /* darker gold for button hover */
+  --bg: #0d1b0f;             /* very dark green-black background */
+  --surface: #1a2e1c;        /* slightly lighter — for cards */
+  --text-primary: #f0f0f0;   /* almost white — main text */
+  --text-secondary: #a8b5a0; /* muted greenish grey — subtitles */
+  --correct: #4caf50;        /* green — correct answer flash */
+  --wrong: #e53935;          /* red — wrong answer flash */
+  --border-radius: 12px;     /* rounded corners everywhere */
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* card shadow */
+}
+
+.hidden{
+  display: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-y : auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-card{
+  background-color: var(--surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;  
+  max-width: 480px;
+  margin: 1rem auto;
+  padding: 50px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h1{
+  text-align: center;
+  font: large;
+  color: var(--accent);
+}
+
+p{
+  font: small;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+#landing-screen > * {
+  margin-bottom: 1rem;
+}
+#landing-screen h1 {
+  margin-bottom: 0.5rem;
+}
+
+#player-name{
+  width: 100%;
+  padding: 10px;
+  background: var(--bg);
+  color: var(--text-primary);
+  border: 1.5px solid var(--primary-light);
+  border-radius: 8px;
+
+}
+
+#player-name:focus{
+  border-color: var(--accent);
+  outline: none;
+}
+
+.category-selector {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.category-selector label {
+  padding: 0.5rem 1.2rem;
+  border: 1.5px solid var(--primary-light);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.category-selector input[type="radio"] {
+  display: none;
+}
+
+.category-selector input[type="radio"]:checked + span {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#next-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--accent);
+  color: #0d1b0f;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: transform 0.2s;
+}
+
+#next-btn:hover {
+  transform: scale(1.02);
+}
+
+.category-selector h2{
+  display: block;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.category-selector {
+  display: flex;
+  flex-direction: column; 
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.pills-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.pills-row label:hover{
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+.game-rules li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.3rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.std-btn{
+  width: 100%;
+  padding: 0.7rem;
+  background: var(--accent);
+  color: #0d1b0f;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+#leaderboard-btn{
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+#start-btn:hover, #leaderboard-btn:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s;
+}
+
+.two-buttons{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+#result-buttons{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+#progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: var(--primary-light);
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--accent);
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+
+#quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+#timer-display {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+
+}
+
+#timer-display.danger {
+  color: var(--wrong);
+  animation: timerPulse 0.6s ease infinite;
+}
+
+@keyframes timerPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+#live-score {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+#current-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+#question-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.option-btn{
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  border: 1.5px solid var(--primary-light);
+  border-radius: var(--border-radius);
+  transition: all 0.2s;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.option-btn:hover{
+  transform: scale(1.02);
+  transition: all 0.2s;
+  background: var(--primary-light);
+  border-color: var(--accent);
+}
+
+.option-btn.correct {
+  background: var(--correct);
+  border-color: var(--correct);
+  color: #fff;
+  animation: correctPulse 0.4s ease;
+}
+
+@keyframes correctPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.option-btn.wrong {
+  background: var(--wrong);
+  border-color: var(--wrong);
+  color: #fff;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+}
+
+#explanation-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+#explanation-text:empty {
+  display: none;
+}
+
+#result-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+#score-display {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#final-score {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+#total-score {
+  font-size: 2rem;
+  color: var(--text-secondary);
+}
+
+#performance-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+#score-breakdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+#leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+#leaderboard-table th{
+  text-align: left;
+  padding: 0.7rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  border-bottom: 1.5px solid var(--primary-light);
+}
+
+#leaderboard-table td {
+  padding: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border-bottom: 0.5px solid var(--primary);
+}
+
+#leaderboard-table tr:first-child td {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 600px){
+  .screen-card{
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+
+  #landing-screen h1{
+    font-size: 1.5rem;
+  }
+
+  .option-btn{
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+  .pills-row {
+  gap: 0.5rem;
+}
+
+.category-selector label,
+.difficulty-selector label {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+#final-score {
+  font-size: 3rem;
+}
+
+#start-btn, #leaderboard-btn {
+  padding: 0.8rem;
+  font-size: 0.9rem;
+}
+}
+
+#clear-leaderboard-btn {
+  background: transparent;
+  border: 1.5px solid var(--wrong);
+  color: var(--wrong);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+#clear-leaderboard-btn:hover {
+  background: var(--wrong);
+  color: #fff;
+}

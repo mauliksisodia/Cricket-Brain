@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="115" fill="#0d1b0f"/>
+
+  <!-- Stump 1 — upright -->
+  <rect x="168" y="145" width="28" height="240" rx="14" fill="#f4c430"/>
+
+  <!-- Stump 2 — knocked back tilted -->
+  <rect x="228" y="130" width="28" height="240" rx="14" fill="#f4c430" transform="rotate(-15 242 200)"/>
+
+  <!-- Stump 3 — slight tilt other way -->
+  <rect x="290" y="145" width="28" height="240" rx="14" fill="#f4c430" transform="rotate(8 304 225)"/>
+
+  <!-- Bail 1 flying off tilted -->
+  <rect x="218" y="118" width="55" height="18" rx="9" fill="#f4c430" transform="rotate(-20 245 127)"/>
+
+  <!-- Bail 2 on left stump -->
+  <rect x="162" y="136" width="48" height="18" rx="9" fill="#f4c430"/>
+
+  <!-- Flying bail debris dots -->
+  <circle cx="334" cy="108" r="8" fill="#f4c430" opacity="0.7"/>
+  <circle cx="354" cy="90" r="5" fill="#f4c430" opacity="0.5"/>
+  <circle cx="344" cy="122" r="5" fill="#f4c430" opacity="0.4"/>
+
+  <!-- Red cricket ball -->
+  <circle cx="360" cy="215" r="68" fill="#c0392b"/>
+
+  <!-- Ball seam left curve -->
+  <path d="M322 185 Q360 215 322 245" fill="none" stroke="#f4e4b0" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Ball seam right curve -->
+  <path d="M398 185 Q360 215 398 245" fill="none" stroke="#f4e4b0" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Motion lines for ball speed -->
+  <line x1="428" y1="192" x2="464" y2="180" stroke="#f4c430" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+  <line x1="430" y1="215" x2="470" y2="215" stroke="#f4c430" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="428" y1="238" x2="464" y2="250" stroke="#f4c430" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
+</svg>

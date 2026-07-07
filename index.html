@@ -1,128 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="styles.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="cricket_brain_favicon.svg">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Cricket Brain</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maulik Sisodia | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  
 </head>
 <body>
 
-    <!-- Landing Screen -->
-    <div id="landing-screen" class="screen-card">
-        <h1>🏏CRICKET BRAIN🏏</h1>
-        <p>"Don't Duck Out — Test Your Cricket IQ"</p>
-    <label for="player-name">Your Name</label>
-    <input type="text" id="player-name" placeholder="Enter Your Name">
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Maulik Sisodia</div>
 
-    <div class="category-selector">
-  <h2>Select Category</h2>
-  <div class="pills-row">
-    <label><input type="radio" name="category" value="IPL"><span>IPL</span></label>
-    <label><input type="radio" name="category" value="Players"><span>Players</span></label>
-    <label><input type="radio" name="category" value="Test Cricket"><span>Test Cricket</span></label>
-    <label><input type="radio" name="category" value="Rules"><span>Rules</span></label>
-  </div>
-</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
 
-
-    <div class="game-rules">
-    <h2>How to Play</h2>
-<ul>
-  <li>Enter your name and choose a category</li>
-  <li>Answer 10 questions before the timer runs out</li>
-  <li>Each correct answer earns 1 point</li>
-  <li>Your score gets saved to the leaderboard</li>
-</ul>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div class="two-buttons">
-        <button id="start-btn" class="start-quiz-btn std-btn">Start Quiz 🏏</button>
-        <button id="leaderboard-btn" class="view-leaderboard-btn std-btn">View Leaderboard 🏆</button>
+  </header>
+
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div>
+        <div class="hero-eyebrow">Hello, I'm</div>
+        <h1>Maulik Sisodia, <span>Web Developer</span></h1>
+        <p>
+          I'm a developer who enjoys turning ideas into clean, functional websites.
+          My journey started with curiosity about how websites work, which led me to learn
+          HTML, CSS and JavaScript, and later dive into frameworks and back-end technologies.
+          Since then, I've built several projects that helped me sharpen my problem-solving
+          skills and grow as a developer. I'm always excited to learn new tools and take on
+          challenging problems.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-visual"><img src="Profile_Pic.png" alt="Maulik Sisodia"></div>
     </div>
+  </section>
+
+  
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-label">My Work</div>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+
+
+        <a class="project-card" href="https://mauliksisodia.github.io/Cricket-Brain/" target="_blank" rel="noopener noreferrer">
+          <div class="project-thumb">Cricket Brain</div>
+          <div class="project-info">
+            <h3>Cricket Brain</h3>
+            <p>A cricket quiz web app built with vanilla HTML, CSS, and JavaScript. Players can test their cricket knowledge across 4 categories — IPL, Players, Test Cricket, and Rules — with 10 randomly shuffled questions per game.</p>
+            <span class="project-link">View Live</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://mauliksisodia.github.io/To-Do-List/" target="_blank" rel="noopener noreferrer">
+          <div class="project-thumb">To Do List</div>
+          <div class="project-info">
+            <h3>To Do List</h3>
+            <p>A clean and functional To-Do List app to add, manage, and track daily tasks, built using vanilla HTML, CSS, and JavaScript..</p>
+            <span class="project-link">View Live</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://mauliksisodia.github.io/Weather-App/" target="_blank" rel="noopener noreferrer">
+          <div class="project-thumb">Weather App</div>
+          <div class="project-info">
+            <h3>Weather App</h3>
+            <p>A minimal weather app built with vanilla HTML, CSS, and JavaScript. Fetches live weather data from the OpenWeatherMap API and displays temperature, humidity, wind, and conditions for any city.</p>
+            <span class="project-link">View Live</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://mauliksisodia.github.io/Rock-Paper-Scissors-Game/" target="_blank" rel="noopener noreferrer">
+          <div class="project-thumb">Rock Paper Scissors</div>
+          <div class="project-info">
+            <h3>Rock Paper Scissors</h3>
+            <p>An interactive Rock Paper Scissors game where you play against the computer, built using vanilla HTML, CSS, and JavaScript.</p>
+            <span class="project-link">View Live</span>
+          </div>
+        </a>
+
+
+        <a class="project-card" href="https://mauliksisodia.github.io/Landing-Page-Project/" target="_blank" rel="noopener noreferrer">
+          <div class="project-thumb">MRF Landing Page</div>
+          <div class="project-info">
+            <h3>MRF Landing Page</h3>
+            <p>A fully responsive landing page inspired by MRF Tyres, built using HTML and CSS — adapts smoothly across desktop, tablet, and mobile screens.</p>
+            <span class="project-link">View Live</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://mauliksisodia.github.io/Digital-Clock/" target="_blank" rel="noopener noreferrer">
+          <div class="project-thumb">Digital Clock</div>
+          <div class="project-info">
+            <h3>Digital Clock</h3>
+            <p>A sleek and functional digital clock built with vanilla HTML, CSS, and JavaScript.</p>
+            <span class="project-link">View Live</span>
+          </div>
+        </a>
+
+
+      </div>
     </div>
-</div>
-<!-- /////////////////////////////////////////////// -->
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Contact Me</h2>
+      <p>
+        Feel free to reach out through any of the platforms below —
+        I'm always open to new opportunities and conversations.
+      </p>
+
+      <div class="social-links">
 
 
-    <!-- Quiz Screen -->
-    <div id="quiz-screen" class="screen-card hidden">
-     <div id="progress-bar-container">
-        <div id="progress-bar"></div>
-     </div>
-    <p id="question-counter">Q1 of 10</p>
+        <a href="https://github.com/mauliksisodia" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>
+          </svg>
+        </a>
 
-    <div id="quiz-header">
-        <span id="timer-display">⏱ 15s</span>
-        <span id="live-score">Score: 0</span>
+    
+        <a href="mailto:mauliksisodia24@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 6-10 7L2 6"/>
+          </svg>
+        </a>
+
+        
+        <a href="https://instagram.com/maulik.sisodia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+
+
+        <a href="https://linkedin.com/in/maulik-sisodia" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 8.5h.01M6.5 21V10.5M11 21V13a2.5 2.5 0 0 1 5 0v8m-5-8v8"/>
+            <rect x="2" y="2" width="20" height="20" rx="2"/>
+          </svg>
+        </a>
+
+      </div>
     </div>
+  </section>
 
-    <p id="current-category">IPL</p>
-    <h2 id="question-text">Current Question</h2>
+  <footer>
+    &copy; 2026 Your Name. Built with HTML, CSS and JavaScript.
+  </footer>
 
-    <div id="options-container">
-  <button class="option-btn" id="option-a">Option A</button>
-  <button class="option-btn" id="option-b">Option B</button>
-  <button class="option-btn" id="option-c">Option C</button>
-  <button class="option-btn" id="option-d">Option D</button>
-</div>
+  <!-- ============================================= 
+       JAVASCRIPT 
+       Only job here: toggle the mobile menu open/closed 
+       when the hamburger icon is clicked.
+  ============================================= -->
+  <script src="script.js"></script>
 
-   <p id="explanation-text" class="hidden"></p>
-   <button id="next-btn" class="hidden">Next Question →</button>
-</div>
-<!-- /////////////////////////////////////////////// -->
-
-
-<!-- Result Screen -->
-
-<div id="result-screen" class="hidden screen-card">
-    <h2 id="result-title">Quiz Complete!</h2>
-<div id="score-display">
-    <span id="final-score">8</span>
-    <span id="total-score">/10</span>
-</div>
-<p id="performance-message">You played well!</p>
-
-<div id="score-breakdown">
-  <span id="correct-count">✅ Correct: 8</span>
-  <span id="wrong-count">❌ Wrong: 2</span>
-</div>
-
-<div id="result-buttons">
-  <button id="play-again-btn" class="std-btn">Play Again 🔄</button>
-  <button id="home-btn" class="std-btn">Home 🏠</button>
-</div>
-</div>
-<!-- ///////////////////////////////////////////// -->
-
-<!-- Leaderboard HTML -->
- <div id="leaderboard-screen" class="screen-card hidden">
-    <h2>🏆 Winners Leaderboard 🏆</h2>
-    <table id="leaderboard-table">
-   <thead>
-    <tr>
-        <th>Rank</th>
-        <th>Name</th>
-        <th>Score</th>
-        <th>Category</th>
-        <th>Date</th>
-    </tr>
-   </thead>     
-   <tbody id="leaderboard-body"></tbody>
-    </table>
-    <button id="clear-leaderboard-btn">Clear LeaderBoard 🗑️</button>
-    <button id="back-home-btn" class="std-btn">Go to Home 🛖</button>
- </div>
-
-
-
-
-
-    <script src="script.js"></script>
-    <script src="questions.js"></script>
 </body>
 </html>
-
